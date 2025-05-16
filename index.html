@@ -433,28 +433,14 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-10 fade-in"><i class="fas fa-envelope-open-text mr-2"></i>Contact</h2>
             <div class="flex justify-center">
-                <div class="w-full max-w-md fade-in">
-                    <form action="https://formspree.io/f/xgvkybyo" method="POST">
-                        <div class="mb-4">
-                            <label class="block text-base mb-1" for="name"><i class="fas fa-user mr-2"></i>Nom</label>
-                            <input class="w-full px-3 py-2 rounded-lg border input-field" style="border-color: var(--primary);" type="text" id="name" name="name" placeholder="Votre nom" required>
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-base mb-1" for="email"><i class="fas fa-at mr-2"></i>Email</label>
-                            <input class="w-full px-3 py-2 rounded-lg border input-field" style="border-color: var(--primary);" type="email" id="email" name="email" placeholder="Votre email" required>
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-base mb-1" for="message"><i class="fas fa-comment mr-2"></i>Message</label>
-                            <textarea class="w-full px-3 py-2 rounded-lg border input-field" style="border-color: var(--primary);" id="message" name="message" rows="4" placeholder="Votre message" required></textarea>
-                        </div>
-                         <!-- Section téléphone -->
-                        <div class="mb-6 text-center">
-                            <a href="tel:+221774733990" class="text-lg font-medium text-blue-700 hover:text-blue-900 transition-colors duration-200">
-                                <i class="fas fa-phone-alt mr-2"></i>+221 77 473 39 90
-                            </a>
-                        </div>
-                        <button class="btn w-full" type="submit"><i class="fas fa-paper-plane mr-2"></i>Envoyer</button>
-                    </form>
+                <div class="w-full max-w-md fade-in flex flex-col space-y-4">
+                    <button class="btn w-full" onclick="envoyerEmail()">
+                        <i class="fas fa-envelope mr-2"></i>Envoyer
+                    </button>
+                    
+                    <button class="btn w-full" onclick="composerNumero()">
+                        <i class="fas fa-phone-alt mr-2"></i>Appeler
+                    </button>
                 </div>
             </div>
         </div>
@@ -571,6 +557,20 @@
         function acceptDoc() {
             window.location.href = "#";
         }
+
+        //contact
+
+        function envoyerEmail() {
+        const destinataire = "roonmbaye5@mail.com"; 
+        const sujet = encodeURIComponent("Contact depuis le portfolio de Harouna");
+        const corps = encodeURIComponent("Bonjour,\n\nJe vous contacte depuis votre portfolio.");
+        window.location.href = `mailto:${destinataire}?subject=${sujet}&body=${corps}`;
+    }
+
+    function composerNumero() {
+        const numero = "+212612345678"; 
+        window.location.href = `tel:${numero}`;
+    }
 </script>
 
 </body>
