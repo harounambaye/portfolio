@@ -231,21 +231,9 @@
           </div>
         </div>
         <div class="text-center mt-6">
-          <button onclick="showDoc()" class="inline-flex items-center px-5 py-3 text-white rounded-full hover:scale-105 transition-transform duration-300 shadow" style="color: #0057a3; font-weight: bold;">
-            <i class="fas fa-download mr-2"></i> Télécharger mon CV
-          </button>
-        </div>
-
-        <div id="doc" onclick="fermerDoc(event)" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center transition-opacity duration-300 opacity-0">
-          <div id="docContent" class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full mx-4 relative scale-95 transition-all duration-300" onclick="event.stopPropagation()">
-            <button onclick="fermerDoc()" class="absolute top-2 right-2 text-red-600 text-xl font-bold hover:scale-125 transition-transform duration-200">&times;</button>
-            <p class="mb-4 text-gray-800 text-center" style="color:red; font-style:italic;">
-              Mon CV est en cours de mise à jour. Merci de revenir un peu plus tard pour le télécharger.
-            </p>
-            <div class="text-center">
-              <button disabled onclick="acceptDoc()" class="text-white px-4 py-2 rounded-full hover:scale-105 transition-transform duration-200" style="background-color: grey; border-radius:2px;">J'accepte</button>
-            </div>
-          </div>
+          <a href="cv/CV_Harouna_MBAYE_Informaticien.pdf" download onclick="showToast()" class="inline-flex items-center px-6 py-3 text-white rounded-full hover:scale-105 transition-transform duration-300 shadow-md" style="background-color: #0057a3; font-weight: bold; text-decoration: none;">
+            <i class="fas fa-file-download mr-2"></i> Télécharger mon CV
+          </a>
         </div>
       </div>
     </div>
@@ -410,27 +398,15 @@
   </script>
 
   <script>
-    function showDoc() {
-      const modal = document.getElementById("doc");
-      const content = document.getElementById("docContent");
-      modal.classList.remove("hidden");
+    function showToast() {
+      const toast = document.getElementById("toast");
+      toast.classList.remove("translate-y-20", "opacity-0");
+      toast.classList.add("translate-y-0", "opacity-100");
       setTimeout(() => {
-        modal.classList.add("opacity-100");
-        modal.classList.remove("opacity-0");
-        content.classList.add("scale-100");
-        content.classList.remove("scale-95");
-      }, 10);
+        toast.classList.remove("translate-y-0", "opacity-100");
+        toast.classList.add("translate-y-20", "opacity-0");
+      }, 4000);
     }
-    function fermerDoc(event) {
-      const modal = document.getElementById("doc");
-      const content = document.getElementById("docContent");
-      modal.classList.remove("opacity-100");
-      modal.classList.add("opacity-0");
-      content.classList.remove("scale-100");
-      content.classList.add("scale-95");
-      setTimeout(() => { modal.classList.add("hidden"); }, 300);
-    }
-    function acceptDoc() { window.location.href = "#"; }
 
     function envoyerEmail() {
       const destinataire = "roonmbaye5@mail.com";
@@ -442,6 +418,22 @@
       window.location.href = `tel:+221774733990`;
     }
   </script>
+
+  <!-- Toast notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-5 py-4 rounded-2xl shadow-2xl translate-y-20 opacity-0 transition-all duration-500"
+       style="background: linear-gradient(135deg, #0057a3, #0080cc); color: white; min-width: 280px;">
+    <div class="flex items-center justify-center w-10 h-10 rounded-full" style="background: rgba(255,255,255,0.2);">
+      <i class="fas fa-check-circle text-xl"></i>
+    </div>
+    <div>
+      <p style="font-weight: bold; font-size: 0.95rem; margin: 0;">Téléchargement lancé !</p>
+      <p style="font-size: 0.8rem; margin: 0; opacity: 0.85;">Merci de l'intérêt pour mon CV 🎉</p>
+    </div>
+    <button onclick="document.getElementById('toast').classList.add('translate-y-20','opacity-0')" 
+            style="margin-left: auto; background: none; border: none; color: white; opacity: 0.7; cursor: pointer; font-size: 1rem;">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
 
 </body>
 </html>
