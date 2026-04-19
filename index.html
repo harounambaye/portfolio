@@ -112,6 +112,50 @@
       height: 100%;
     }
 
+    /* Badge IA spécial */
+    .badge-ai {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: linear-gradient(135deg, #0057a3, #0080cc);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+    }
+    .badge-groq {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #f5c518;
+      color: #1a3a20;
+      font-size: 0.65rem;
+      font-weight: bold;
+      padding: 2px 7px;
+      border-radius: 20px;
+    }
+    .esenguide-card-inner {
+      background: linear-gradient(160deg, #0f2a14 0%, #1a3a20 60%, #0057a3 100%);
+      color: white;
+      transition: filter 0.25s ease;
+      height: 100%;
+    }
+    .project-card-link:hover .esenguide-card-inner {
+      filter: brightness(1.08);
+    }
+    .esenguide-thumb {
+      width: 100%;
+      height: 160px;
+      overflow: hidden;
+      background: #1a3a20;
+    }
+    .esenguide-thumb svg {
+      width: 100%;
+      height: 100%;
+    }
+
     /* MODAL STYLE */
     .animate-fadeIn {
       opacity: 0;
@@ -217,14 +261,14 @@
           <button onclick="closeModal()" class="text-gray-600 hover:text-red-500 text-lg"><i class="fas fa-times"></i></button>
         </div>
         <div class="space-y-4 mt-4 text-gray-800 text-base">
-          <div><i class="fas fa-university text-[#0057a3] mr-2"></i><b>Master en SIR (En cours)</b>, UCAD.</div>
-          <div><i class="fas fa-university text-[#0057a3] mr-2"></i><b>Licence en Informatique (2023)</b>, UCAD.</div>
+          <div><i class="fas fa-university text-[#0057a3] mr-2"></i><b>Master en BI (En cours)</b>, UCAD.</div>
+          <div><i class="fas fa-university text-[#0057a3] mr-2"></i><b>Master 1 en SIR </b>, UCAD.</div>
+          <div><i class="fas fa-university text-[#0057a3] mr-2"></i><b>Licence en Informatique (2024)</b>, UCAD.</div>
           <div><i class="fas fa-laptop-code text-[#0057a3] mr-2"></i><b>Stage de fin d'études</b> : Appli gestion commandes.</div>
           <div><i class="fas fa-briefcase text-[#0057a3] mr-2"></i><b>Vacataire à l'IITEM</b> : Développement, bureautique.</div>
-          <div><i class="fas fa-code text-[#0057a3] mr-2"></i><b>Technos :</b> Java EE, Spring, PHP, JS, etc.</div>
+          <div><i class="fas fa-code text-[#0057a3] mr-2"></i><b>Technos :</b> Python, Java EE, PHP, JS, etc.</div>
           <div><i class="fas fa-tools text-[#0057a3] mr-2"></i><b>Outils :</b> Git, Docker, Eclipse, etc.</div>
           <div><i class="fas fa-layer-group text-[#0057a3] mr-2"></i><b>Autres domaines :</b> Sécurité, réseaux, Big Data.</div>
-          <!--div><i class="fas fa-bullseye text-[#0057a3] mr-2"></i><b>Objectif :</b> Devenir data scientist.</div-->
           <div class="mt-4 italic text-sm flex items-center gap-2" style="color: #0057a3;">
             <i class="fas fa-info-circle"></i>
             <span><strong>Plus de projets, compétences et expériences dans mon CV 👇</strong></span>
@@ -290,6 +334,86 @@
       <h2 class="text-3xl font-bold text-center mb-10 fade-in"><i class="fas fa-project-diagram mr-2"></i>Projets</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
+        <!-- ✨ CARTE eSenGuide — Agent IA (NOUVEAU) -->
+        <a href="https://esenguide-harouna.vercel.app/" target="_blank" class="project-card-link hover-scale fade-in">
+          <div class="esenguide-card-inner rounded-lg shadow-md overflow-hidden">
+            <!-- Image SVG générée -->
+            <div class="esenguide-thumb">
+              <svg viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <rect width="680" height="340" fill="#1a3a20"/>
+                <g opacity="0.07" stroke="#ffffff" stroke-width="1">
+                  <line x1="0" y1="0" x2="680" y2="340"/>
+                  <line x1="80" y1="0" x2="680" y2="255"/>
+                  <line x1="160" y1="0" x2="680" y2="170"/>
+                  <line x1="240" y1="0" x2="680" y2="85"/>
+                  <line x1="320" y1="0" x2="680" y2="0"/>
+                  <line x1="0" y1="80" x2="600" y2="340"/>
+                  <line x1="0" y1="160" x2="520" y2="340"/>
+                  <line x1="0" y1="240" x2="340" y2="340"/>
+                </g>
+                <!-- Carte Sénégal -->
+                <polygon points="200,60 280,55 340,70 390,80 420,110 415,150 400,185 370,210 330,220 290,215 260,230 240,220 200,200 175,175 165,140 170,100" fill="#2c6e34" opacity="0.85" stroke="#4a9a54" stroke-width="1.5"/>
+                <polygon points="220,155 224,167 237,167 227,175 231,187 220,180 209,187 213,175 203,167 216,167" fill="#f5c518" opacity="0.9"/>
+                <text x="240" y="185" font-family="Georgia,serif" font-size="11" fill="#f5c518" font-weight="bold" opacity="0.95">Dakar</text>
+                <rect x="175" y="35" width="120" height="20" rx="10" fill="#f5c518" opacity="0.92"/>
+                <text x="235" y="49" font-family="Georgia,serif" font-size="11" fill="#1a3a20" text-anchor="middle" font-weight="bold">SÉNÉGAL</text>
+                <!-- Robot IA -->
+                <rect x="430" y="120" width="80" height="90" rx="10" fill="#0057a3" opacity="0.95"/>
+                <rect x="440" y="85" width="60" height="48" rx="12" fill="#0068c4"/>
+                <line x1="470" y1="85" x2="470" y2="65" stroke="#f5c518" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="470" cy="61" r="5" fill="#f5c518"/>
+                <circle cx="456" cy="106" r="6" fill="#ffffff"/>
+                <circle cx="484" cy="106" r="6" fill="#ffffff"/>
+                <circle cx="458" cy="107" r="3" fill="#0057a3"/>
+                <circle cx="486" cy="107" r="3" fill="#0057a3"/>
+                <path d="M456 120 Q470 130 484 120" fill="none" stroke="#f5c518" stroke-width="2" stroke-linecap="round"/>
+                <rect x="405" y="130" width="28" height="12" rx="6" fill="#0057a3"/>
+                <rect x="507" y="130" width="28" height="12" rx="6" fill="#0057a3"/>
+                <rect x="445" y="207" width="16" height="28" rx="6" fill="#004d8c"/>
+                <rect x="479" y="207" width="16" height="28" rx="6" fill="#004d8c"/>
+                <rect x="447" y="145" width="46" height="18" rx="5" fill="#f5c518"/>
+                <text x="470" y="158" font-family="monospace" font-size="10" fill="#1a3a20" text-anchor="middle" font-weight="bold">eSen AI</text>
+                <!-- Bulles -->
+                <rect x="60" y="70" width="110" height="36" rx="8" fill="#ffffff" opacity="0.93"/>
+                <text x="115" y="84" font-family="Georgia,serif" font-size="10" fill="#1a3a20" text-anchor="middle" font-weight="bold">Carte d'identité</text>
+                <text x="115" y="98" font-family="Georgia,serif" font-size="9" fill="#0057a3" text-anchor="middle">Démarche guidée</text>
+                <line x1="170" y1="88" x2="200" y2="120" stroke="#f5c518" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.7"/>
+                <rect x="45" y="155" width="118" height="36" rx="8" fill="#ffffff" opacity="0.93"/>
+                <text x="104" y="169" font-family="Georgia,serif" font-size="10" fill="#1a3a20" text-anchor="middle" font-weight="bold">Casier judiciaire</text>
+                <text x="104" y="183" font-family="Georgia,serif" font-size="9" fill="#0057a3" text-anchor="middle">Documents requis</text>
+                <line x1="163" y1="173" x2="200" y2="170" stroke="#f5c518" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.7"/>
+                <rect x="60" y="240" width="100" height="36" rx="8" fill="#ffffff" opacity="0.93"/>
+                <text x="110" y="254" font-family="Georgia,serif" font-size="10" fill="#1a3a20" text-anchor="middle" font-weight="bold">Passeport</text>
+                <text x="110" y="268" font-family="Georgia,serif" font-size="9" fill="#0057a3" text-anchor="middle">Étapes simplifiées</text>
+                <line x1="160" y1="258" x2="210" y2="220" stroke="#f5c518" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.7"/>
+                <rect x="540" y="70" width="110" height="36" rx="8" fill="#f5c518" opacity="0.95"/>
+                <text x="595" y="84" font-family="monospace" font-size="10" fill="#1a3a20" text-anchor="middle" font-weight="bold">Groq · Llama 3.3</text>
+                <text x="595" y="98" font-family="Georgia,serif" font-size="9" fill="#1a3a20" text-anchor="middle">70B — Moteur IA</text>
+                <line x1="541" y1="88" x2="510" y2="110" stroke="#f5c518" stroke-width="1.2" opacity="0.7"/>
+                <rect x="210" y="278" width="260" height="46" rx="10" fill="#0057a3" opacity="0.95"/>
+                <text x="340" y="297" font-family="Georgia,serif" font-size="13" fill="#f5c518" text-anchor="middle" font-weight="bold">eSenGuide</text>
+                <text x="340" y="313" font-family="Georgia,serif" font-size="10" fill="#ffffff" text-anchor="middle">Assistant Administratif Intelligent</text>
+              </svg>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <h3 class="text-lg font-semibold text-white"><i class="fas fa-robot mr-2" style="color:#f5c518;"></i>eSenGuide 🇸🇳</h3>
+                <span class="badge-ai"><i class="fas fa-brain" style="font-size:9px;"></i> Agent IA</span>
+                <span class="badge-groq">Groq Free</span>
+              </div>
+              <p class="text-sm mb-2" style="color: rgba(255,255,255,0.85);">
+                Guide intelligent pour toutes les démarches administratives au Sénégal : carte d'identité, casier judiciaire, passeport… Répond en temps réel grâce à une base de connaissance locale.
+              </p>
+              <p class="text-xs mb-3" style="color: rgba(255,255,255,0.55); font-style: italic;">
+                React · FastAPI · Llama 3.3 70B · JSON Knowledge Base
+              </p>
+              <span class="inline-block px-4 py-2 rounded-lg text-sm font-bold" style="background:#f5c518; color:#1a3a20;">
+                <i class="fas fa-external-link-alt mr-1"></i>Voir le site
+              </span>
+            </div>
+          </div>
+        </a>
+
         <!-- Carte 1 : HM EDUCATION (cliquable) -->
         <a href="https://hmeducation.lovestoblog.com/gestionCoursEtSalles/index.html" target="_blank" class="project-card-link hover-scale fade-in">
           <div class="project-card-inner rounded-lg shadow-md overflow-hidden">
@@ -302,7 +426,7 @@
           </div>
         </a>
 
-        <!-- Carte 2 : Gestion Commerciale (pas de lien, démonstration sur demande) -->
+        <!-- Carte 2 : Gestion Commerciale -->
         <div class="rounded-lg shadow-md overflow-hidden hover-scale fade-in" style="background-color: var(--secondary); color: var(--primary);">
           <img src="image/gestioncom.jpeg" alt="Projet local 1" class="w-full h-40 object-cover">
           <div class="p-4">
@@ -312,7 +436,7 @@
           </div>
         </div>
 
-        <!-- Carte 3 : Restaurant (cliquable) -->
+        <!-- Carte 3 : Restaurant -->
         <a href="https://hmfood.free.nf/omg_food/contenu/index.php" target="_blank" class="project-card-link hover-scale fade-in">
           <div class="project-card-inner rounded-lg shadow-md overflow-hidden">
             <img src="image/resto.webp" alt="Projet local 2" class="w-full h-40 object-cover">
@@ -384,13 +508,11 @@
       });
     }, { threshold: 0.1 });
     fadeIns.forEach(fadeIn => observer.observe(fadeIn));
-
     window.addEventListener('scroll', () => {
       const navbar = document.querySelector('.navbar');
       navbar.classList.toggle('scrolled', window.scrollY > 50);
     });
   </script>
-
   <script>
     const navbar = document.querySelector('.navbar');
     const toggleBtn = document.querySelector('.navbar-toggle');
@@ -402,7 +524,6 @@
       if (!navbar.contains(e.target)) navbar.classList.remove('active');
     });
   </script>
-
   <script>
     function openModal() {
       const modal = document.getElementById('parcoursModal');
@@ -420,19 +541,17 @@
       if (!document.getElementById('modalContent').contains(event.target)) closeModal();
     }
   </script>
-
   <script>
     function telechargerCV() {
       const link = document.createElement('a');
       link.href = 'cv/CV_Harouna_MBAYE_V.pdf';
-      link.target = '_blank';       // ouvre dans un nouvel onglet (compatible mobile)
+      link.target = '_blank';
       link.download = 'CV_Harouna_MBAYE_V.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
       showToast();
     }
-
     function showToast() {
       const toast = document.getElementById("toast");
       toast.classList.remove("translate-y-20", "opacity-0");
@@ -442,7 +561,6 @@
         toast.classList.add("translate-y-20", "opacity-0");
       }, 4000);
     }
-
     function envoyerEmail() {
       const destinataire = "roonmbaye5@mail.com";
       const sujet = encodeURIComponent("Contact depuis le portfolio de Harouna");
@@ -463,7 +581,7 @@
       <p style="font-weight: bold; font-size: 0.95rem; margin: 0;">Téléchargement lancé !</p>
       <p style="font-size: 0.8rem; margin: 0; opacity: 0.85;">Merci de l'intérêt pour mon CV 🎉</p>
     </div>
-    <button onclick="document.getElementById('toast').classList.add('translate-y-20','opacity-0')" 
+    <button onclick="document.getElementById('toast').classList.add('translate-y-20','opacity-0')"
             style="margin-left: auto; background: none; border: none; color: white; opacity: 0.7; cursor: pointer; font-size: 1rem;">
       <i class="fas fa-times"></i>
     </button>
